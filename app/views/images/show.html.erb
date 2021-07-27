@@ -1,0 +1,17 @@
+<div class="pb-2 mt-4 mb-2 border-bottom">
+  <div class="row">
+    <div class="col-sm-6">
+        <h3>image</h3>
+    </div>
+    <div class="col-sm-6">
+      <div align="right">
+        <%= link_to 'Editar', edit_image_path(@image) %>
+        <%= link_to ' | Atras',images_path %>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<p><strong>Title:</strong><%= @image.title %></p>
+<p><strong>Small: <%= image_tag(@image.picture.small.url, alt: 'Picture') %> </p>
+<p><strong>Large: <%= image_tag(@image.picture.large.url, alt: 'Picture') %> </p>
