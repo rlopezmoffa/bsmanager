@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /images or /images.json
   def index
