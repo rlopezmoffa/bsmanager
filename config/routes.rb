@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :documents
+      resources :documents do
+        get :get_all, on: :collection
+        post :login, on: :collection
+      end
       resources :images
     end
   end
