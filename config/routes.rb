@@ -10,7 +10,9 @@ Rails.application.routes.draw do
         get :get_all, on: :collection
         post :login, on: :collection
       end
-      resources :images
+      resources :images do
+        get :get_pictures, on: :collection
+      end
     end
   end
 

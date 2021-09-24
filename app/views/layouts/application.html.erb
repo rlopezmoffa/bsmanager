@@ -3,7 +3,7 @@
   <head>
     <title>Bsmanager</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>    
+    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -24,7 +24,7 @@
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to "Imagenes", images_path, class: "dropdown-item"  %>
-              <%= link_to "Documentos", documents_path, class: "dropdown-item"  %>
+              <%= link_to "Documentos", '#', class: "dropdown-item"  %>
             </div>
           </li>
         </ul>
