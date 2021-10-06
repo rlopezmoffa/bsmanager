@@ -11,8 +11,8 @@ development:
   reconnect: false
   database: backstore
   pool: 5
-  username: root
-  password: "root"
+  username: dbu
+  password: "1234"
 
 test:
   <<: *default
