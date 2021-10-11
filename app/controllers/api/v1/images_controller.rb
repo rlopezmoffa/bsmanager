@@ -18,6 +18,7 @@ class Api::V1::ImagesController < ApplicationController
     pictures = @images.map do | image |
     {
       thumbnail: url + image.picture.thumb.url,
+      small: url + image.picture.small.url,
       original:  url + image.picture.large.url
     }
     end
