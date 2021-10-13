@@ -1,7 +1,7 @@
 <div class="pb-2 mt-4 mb-2 border-bottom">
   <div class="row">
     <div class="col-sm-6">
-      <h3>Documentos</h3>
+      <h4>Documentos</h4>
     </div>
     <div class="col-sm-6">
       <div align="right">
@@ -24,7 +24,7 @@
     <tbody>
       <% @documents.each do |document| %>
       <tr>
-        <td><%= document.title %></td>     
+        <td><%= document.title %></td>
         <td><div align="center"><%= link_to image_tag('examine-icon.png', :size => "20x20"), document %></td>
         <td><div align="center"><%= link_to image_tag('delete-icon.png', :size => "20x20"), document, method: :delete, data: { confirm: 'Confirma el borrado del documento?' } %></td>
       </tr>

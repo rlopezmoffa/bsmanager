@@ -1,7 +1,7 @@
 <div class="pb-2 mt-4 mb-2 border-bottom">
   <div class="row">
     <div class="col-sm-6">
-      <h3>Imagenes</h3>
+      <h4>Imagenes</h4>
     </div>
     <div class="col-sm-6">
       <div align="right">
@@ -27,8 +27,8 @@
       <tr>
         <td><div align="center"><%= File.basename(image.picture.url) %></td>
         <td><div align="center"><%= image_tag(image.picture.thumb.url, alt: 'Picture') %></td>
-        <td><%= link_to 'Detalle', image %></td>
-        <td><%= link_to 'Borrar', image, method: :delete, data: { confirm: 'Confirma la eliminacion de la imagen?' } %></td>
+        <td><div align="center"><%= link_to image_tag('examine-icon.png', :size => "20x20"), image %></td>
+        <td><div align="center"><%= link_to image_tag('delete-icon.png', :size => "20x20"), image, method: :delete, data: { confirm: 'Confirma el borrado de la imagen?' } %></td>
       </tr>
       <% end %>
     </tbody>
