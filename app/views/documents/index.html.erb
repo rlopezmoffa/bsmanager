@@ -16,8 +16,6 @@
     <thead>
       <tr>
         <th>Titulo</th>
-        <th>Texto</th>
-        <th></th>
         <th></th>
         <th></th>
       </tr>
@@ -26,11 +24,9 @@
     <tbody>
       <% @documents.each do |document| %>
       <tr>
-        <td><%= document.title %></td>
-        <td><%= document.text %></td>
-        <td><%= link_to 'Ver', document %></td>
-        <td><%= link_to 'Editar', edit_document_path(document) %></td>
-        <td><%= link_to 'Borrar', document, method: :delete, data: { confirm: 'Confirma el borrado del documento?' } %></td>
+        <td><%= document.title %></td>     
+        <td><div align="center"><%= link_to image_tag('examine-icon.png', :size => "20x20"), document %></td>
+        <td><div align="center"><%= link_to image_tag('delete-icon.png', :size => "20x20"), document, method: :delete, data: { confirm: 'Confirma el borrado del documento?' } %></td>
       </tr>
       <% end %>
     </tbody>

@@ -1,0 +1,46 @@
+<div class="pb-2 mt-4 mb-2 border-bottom">
+  <div class="row">
+    <div class="col-sm-6">
+        <h4>Vista previa</h4>
+    </div>
+    <div class="col-sm-6">
+      <div align="right">
+        <%= link_to 'Atras',@document %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pb-2 mt-4 mb-2">
+
+  <h4><%= @document.title %></h4>
+
+  <div class="table-responsive">
+    <table >
+
+      <tbody>
+        <% @document.paragraphs.each do |paragraph| %>
+
+          <% if paragraph.title.present? %>
+          <tr>
+            <td><strong><%= paragraph.title %></strong></td>
+          </tr>
+
+          <% end %>
+
+          <tr>
+            <td><%= paragraph.text %></td>
+          </tr>
+
+          <tr>
+            <td>&nbsp</td>
+          </tr>
+
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+
+</div>

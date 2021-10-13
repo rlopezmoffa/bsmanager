@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'document_preview/index'
+  resources :paragraphs
   resources :messages
   get 'home/index'
   resources :documents
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
       end
 
       resources :images do
-        get :get_pictures, on: :collection
+        get :get_all, on: :collection
       end
 
       resources :messages do
