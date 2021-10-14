@@ -1,6 +1,3 @@
-# json.array! @documents, partial: "documents/document", as: :document
-
-
 json.array! @documents do |document|
   json.id document.id
   json.title document.title
